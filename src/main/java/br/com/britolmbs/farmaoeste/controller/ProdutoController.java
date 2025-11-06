@@ -16,7 +16,7 @@ public class ProdutoController {
     CadatroProdutoUseCase cadatroProdutoUseCase;
 
     @PostMapping("/create")
-    public void create(@RequestBody Produto produto){
-        cadatroProdutoUseCase.execute(produto);
+    public Produto create(@RequestBody Produto produto){
+        return cadatroProdutoUseCase.execute(produto);
     }
 }
