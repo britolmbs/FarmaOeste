@@ -15,8 +15,8 @@ public class Produto {
 
     private String nome;
     private String descricao;
-    private double preco;
-    private int quantidade_estoque;
+    private Double preco;
+    private Integer quantidade_estoque;
 
     @CreatedDate
     private LocalDate data_criacao;
@@ -45,19 +45,19 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
-    public int getQuantidade_estoque() {
+    public Integer getQuantidade_estoque() {
         return quantidade_estoque;
     }
 
-    public void setQuantidade_estoque(int quantidade_estoque) {
+    public void setQuantidade_estoque(Integer quantidade_estoque) {
         this.quantidade_estoque = quantidade_estoque;
     }
 

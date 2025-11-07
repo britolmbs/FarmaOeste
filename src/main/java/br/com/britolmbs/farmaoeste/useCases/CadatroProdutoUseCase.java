@@ -12,6 +12,9 @@ public class CadatroProdutoUseCase {
     private ProdutoRepository produtoRepository;
 
     public Produto execute(Produto produto) {
+        if (produto.getNome() == null || produto.getPreco() == null || produto.getDescricao() == null || produto.getQuantidade_estoque() == null){
+            throw  new IllegalArgumentException("Preencher os campos todos os campos");
+        }
         produtoRepository.save(produto);
         return produto;
     }
